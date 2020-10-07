@@ -7,7 +7,7 @@
     "start-dev": "nodemon --inspect dist/app.js",
     "wath-dev": "tsc -w",
     "build": "tsc",
-    "stert": "node dist/app.ts"
+    "start": "node dist/app.ts"
   },
   "dependencies": {
     "@type/node": "^12.0.10",
