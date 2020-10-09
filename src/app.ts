@@ -25,6 +25,7 @@ app.get('/', (req, res) => {
 io.on('connection', (socketChannel) => {
     socketChannel.on("client-message-sent", (message: string) => {
         let messageItem = { message: message, id: 'ab' + new Date().getTime(), user: { id: "dddvn", name: "BOB" } }
+        messages.push(messageItem)
         socketChannel.emit('new-message-sent', messageItem)
     })
     socketChannel.emit('init-messages-published', messages)
